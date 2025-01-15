@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faTwitter, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +13,8 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="flex items-center justify-between p-4 bg-opacity-75 text-white fixed top-0 left-0 w-full z-50">
+      <nav className="flex items-center justify-between px-6 py-4 bg-opacity-75 text-white fixed top-0 left-0 w-full z-50">
+        {/* Logo */}
         <div className="logo">
           <a href="#">
             <img src="/assets/img/logo2.png" alt="Logo" className="h-12" />
@@ -28,16 +31,22 @@ export default function Navbar() {
 
         {/* Social Icons */}
         <div className="hidden md:flex space-x-4">
-          <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Twitter"><i className="fab fa-twitter"></i></a>
-          <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook">
+            <FontAwesomeIcon icon={faFacebookF} className="text-xl" />
+          </a>
+          <a href="#" aria-label="Twitter">
+            <FontAwesomeIcon icon={faTwitter} className="text-xl" />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <FontAwesomeIcon icon={faInstagram} className="text-xl" />
+          </a>
         </div>
 
         {/* Hamburger Menu */}
         <button
-          id="hamburger"
           onClick={toggleMenu}
           className="md:hidden flex flex-col space-y-1"
+          aria-label="Toggle menu"
         >
           <span className="block w-6 h-0.5 bg-white"></span>
           <span className="block w-6 h-0.5 bg-white"></span>
