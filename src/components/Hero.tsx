@@ -12,7 +12,7 @@ export default function Hero() {
           Tu navegador no soporta la etiqueta de video.
         </video>
         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-          <h1 className="text-white text-4xl font-bold text-center px-4">
+          <h1 className="text-white text-4xl font-bold text-center px-4 m-9">
             Donde la tecnología y la naturaleza se encuentran para crear
             experiencias digitales inolvidables.
           </h1>
