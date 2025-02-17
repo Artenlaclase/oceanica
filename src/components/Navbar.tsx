@@ -29,7 +29,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <header className="bg-gray-800 bg-opacity-75 fixed top-0 left-0 w-full z-50">
+        <header className="bg-gray-800 bg-opacity-15 fixed top-0 left-0 w-full z-50">
             <nav className="flex items-center justify-between px-6 py-4 text-white relative">
                 {/* Logo */}
                 <div className="logo">
@@ -69,7 +69,7 @@ export default function Navbar() {
             {/* Menú móvil (fuera del nav para evitar problemas de cierre) */}
             <div
                 ref={menuRef}
-                className={`md:hidden fixed top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-95 flex flex-col items-center justify-center transition-transform duration-300 ${
+                className={`md:hidden fixed top-0 left-0 w-full h-screen bg-gray-900 bg-opacity-15 flex flex-col items-center justify-center transition-transform duration-300 ${
                     isOpen ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
                 }`}
             >
